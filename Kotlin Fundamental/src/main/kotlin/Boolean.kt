@@ -1,23 +1,20 @@
-fun main() {
-    val Nilaiku = 90
-    val kkm = 75
-    val tuntas = Nilaiku > kkm
+import java.util.*
 
-    if (!tuntas) {
-        print("Anda belum tuntas")
-        } else {
-        print("Anda Tuntas")
-        }
-    println()
-    if(Nilaiku >= 90){
-        println("Anda mendapatkan nilai A")
-    }else if(Nilaiku >= 80){
-        println("Anda mendapatkan nilai B")
-    }else if(Nilaiku >= 70){
-        println("Anda mendapatkan nilai C")
-    }else if(Nilaiku >= 60){
-        println("Anda mendapatkan nilai D")
-    }else{
-        println("Anda Mendapatkan nilai E")
+fun main(){
+    val nilai = Scanner(System.`in`)
+    print("Masukkan Nilai:")
+    val nilaiTuntas : Int = nilai.nextInt()
+    val result : Char = if (nilaiTuntas >= 90){
+        'A'
+    }else if (nilaiTuntas >=80){
+        'B'
+    }else if (nilaiTuntas>=70){
+        'C'
+    }else if (nilaiTuntas>=60){
+        'D'
+    }else {
+        'E'
     }
+
+    print("Nilai Anda : $result")
 }
